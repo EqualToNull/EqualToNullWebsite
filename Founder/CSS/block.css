@@ -1,0 +1,26 @@
+#Block {
+    width: 100%;
+    box-sizing: border-box;
+    border: solid thin white;
+    padding: 10px;
+}
+
+#Block p {
+    color: white;
+}
+
+#Date p {
+    margin: 0;
+}
+
+#Image {
+    border: solid thin white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#Image img {
+    display: block;
+    width: 100%;
+}
+

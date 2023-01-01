@@ -1,0 +1,21 @@
+#AboutSection {
+    background: white;
+    border: solid thick gray;
+    height: 100%;
+    width: 40%;
+    margin: 50px auto;
+}
+
+#AboutContent {
+    padding: 0 15px;
+}
+
+
+
+#AboutFounder a {
+    text-decoration: none;
+}
+
+#AboutFounder h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}

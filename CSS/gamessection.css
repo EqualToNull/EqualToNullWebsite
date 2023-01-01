@@ -1,0 +1,66 @@
+#GamesSection {
+    height: 100%;
+    background-image:
+    radial-gradient(ellipse at left, rgba(255, 255, 255, 0.2), rgba(20, 20, 20, 0.01), transparent),
+    radial-gradient(ellipse at right, rgba(255, 255, 255, 0.2), rgba(20, 20, 20, 0.01), transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#GamesHeader {
+    margin: auto;
+    width: fit-content;
+}
+#GamesHeader h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+#Games {
+    margin: auto;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#Games div img {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#Games div {
+    flex: 1 1 50%;
+    padding: 25px;
+    box-sizing: border-box;
+    opacity: 0.5;
+    transition: 0.4s ease-out;
+}
+
+#Game1:hover {
+    opacity: 1;
+}
+#Game2:hover {
+    opacity: 1;
+}
+#Game3:hover {
+    opacity: 1;
+}
+#Game4:hover {
+    opacity: 1;
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+

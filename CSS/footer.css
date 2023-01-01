@@ -1,0 +1,45 @@
+#Footer {
+    background-image: linear-gradient(to top, white, black);
+}
+
+#FooterLogo {
+    display: flex;
+    margin: 0 20%;
+}
+
+#FooterContent {
+    display: flex;
+    margin: 0 20%;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+#FooterBlock h2, #FooterBlock a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+#FooterBlock h2 {
+    color: white;
+}
+
+#FooterBlock a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+#FooterLogo a {
+    text-decoration: none;
+}
+#FooterLogo h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    color: black;
+}
+#FooterLogo span {
+    background-color: black;
+    color: white;
+    letter-spacing: -2px;
+    padding: 5px;
+}
