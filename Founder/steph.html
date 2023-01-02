@@ -8,9 +8,13 @@
 
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
+    <script src="data.js"></script>
+
     <link rel="stylesheet" href="CSS/steph.css">
     <link rel="stylesheet" href="CSS/profile.css">
     <link rel="stylesheet" href="CSS/block.css">
+    <link rel="stylesheet" href="CSS/content.css">
+   
 
   </head>
 
@@ -73,66 +77,12 @@
 
 
     <div id="Content">
-
-
-
-
-
-
-
-      <div id="Block">
-
-
-
-
-
-        <div id="Date">
-
-          <p>2023 Jan 1</p>
-
-        </div>
-
-        <div id="Caption">
-
-          <p>...</p>
-
-        </div>
-
-        <div id="Image">
-
-          <img src="Images/2023-Jan-01.png" alt="">
-
-        </div>
-
-        <script>
-
-
-
-
-
-        </script>
-
-
-
-
-
-
-
-      </div>
-
-      <h1 style="color: white;">Hello World!</h1>
-
-
-
-
-
-
-
-
-
     </div>
 
 
+    
+
+    
 
 
 
@@ -148,7 +98,70 @@
   </div>
 
 
+  <script>
 
+    const maxposts = Object.keys(Post).length
+
+    const parent = document.getElementById("Content");
+    let currentblocks = parent.querySelectorAll(".Block")
+
+    let blockcount = currentblocks.length;
+
+
+
+    window.onload = function() {
+
+      
+      for (let i = maxposts; i > maxposts - 2 ; i--) {
+        
+        parent.innerHTML += `
+        <div class="Block">
+
+        <p class="DateAndTime">${Post[i].DateAndTime}</p>
+
+        <p class="Caption">${Post[i].Caption}</p>
+
+        <img class="Image" src="${Post[i].Image}" alt="">
+
+        </div>
+        `
+
+
+      };
+
+      
+    }
+
+    window.onscroll = function() {
+      if (window.innerHeight + window.scrollY + 1 >= document.body.scrollHeight) {
+        let currentblocks = parent.querySelectorAll(".Block");
+        let blockcount = currentblocks.length;
+        
+        if (blockcount < maxposts) {
+          let startingpoint = maxposts - blockcount;
+          for (let i = startingpoint; i > startingpoint - 1; i--) {
+            parent.innerHTML += `
+            <div class="Block">
+
+            <p class="DateAndTime">${Post[i].DateAndTime}</p>
+
+            <p class="Caption">${Post[i].Caption}</p>
+
+            <img class="Image" src="${Post[i].Image}" alt="">
+
+            </div>
+            `
+          }
+        }
+      }
+    }
+
+
+        
+
+
+
+  </script>
 
 
   </body>

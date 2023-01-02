@@ -11,16 +11,6 @@ body {
     display: flex;
     margin: 0 auto;
     gap: 5px;
-    height: 100%;
     width: 1000px;
-}
-
-#Content {
-    border: solid thin white;
-    border-top: none;
-    height: 800px;
-    width: 60%;
-    padding: 5px;
-    box-sizing: border-box;
 }
 

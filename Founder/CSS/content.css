@@ -1,0 +1,7 @@
+#Content {
+    border: solid thin white;
+    border-top: none;
+    width: 60%;
+    padding: 10px;
+    box-sizing: border-box;
+}
