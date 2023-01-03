@@ -9,6 +9,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <script src="data.js"></script>
+    <script src="makepost.js"></script>
 
     <link rel="stylesheet" href="CSS/steph.css">
     <link rel="stylesheet" href="CSS/profile.css">
@@ -76,7 +77,7 @@
 
 
 
-    <div id="Content">
+    <div id="Timeline">
     </div>
 
 
@@ -102,7 +103,7 @@
 
     const maxposts = Object.keys(Post).length
 
-    const parent = document.getElementById("Content");
+    const parent = document.getElementById("Timeline");
     let currentblocks = parent.querySelectorAll(".Block")
 
     let blockcount = currentblocks.length;
@@ -114,47 +115,40 @@
       
       for (let i = maxposts; i > maxposts - 2 ; i--) {
         
-        parent.innerHTML += `
-        <div class="Block">
-
-        <p class="DateAndTime">${Post[i].DateAndTime}</p>
-
-        <p class="Caption">${Post[i].Caption}</p>
-
-        <img class="Image" src="${Post[i].Image}" alt="">
-
-        </div>
-        `
-
+        MakePost(Post[i]);
 
       };
+    };
+
+
+
+    
+    window.onscroll = function() {
 
       
-    }
+      console.log(document.body.scrollHeight)
 
-    window.onscroll = function() {
-      if (window.innerHeight + window.scrollY + 1 >= document.body.scrollHeight) {
+      if (window.innerHeight + window.scrollY + 2 >= document.body.scrollHeight - 50) {
+
         let currentblocks = parent.querySelectorAll(".Block");
         let blockcount = currentblocks.length;
         
+
+        
         if (blockcount < maxposts) {
+
           let startingpoint = maxposts - blockcount;
-          for (let i = startingpoint; i > startingpoint - 1; i--) {
-            parent.innerHTML += `
-            <div class="Block">
 
-            <p class="DateAndTime">${Post[i].DateAndTime}</p>
+          for (let i = startingpoint; i > startingpoint - 2; i--) {
 
-            <p class="Caption">${Post[i].Caption}</p>
+            MakePost(Post[i]);
 
-            <img class="Image" src="${Post[i].Image}" alt="">
 
-            </div>
-            `
-          }
-        }
-      }
-    }
+          };
+        };
+      };
+    };
+
 
 
         

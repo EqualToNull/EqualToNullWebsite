@@ -14,15 +14,20 @@
     margin: 0;
 }
 
-.Image {
+.Content {
     border: solid thin white;
     border-radius: 10px;
     overflow: hidden;
+    display: flex;
+    width: 100%;
+}
+
+.Image {
     display: block;
     width: 100%;
 }
 
-.Image img {
+.Video {
     display: block;
     width: 100%;
 }
